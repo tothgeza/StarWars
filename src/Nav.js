@@ -46,7 +46,7 @@ export default function Nav() {
             <Link className="nav-item nav-link" to='/people'>
                 People
             </Link>
-            <Link className="nav-item nav-link">
+            <Link className="nav-item nav-link" to='/planets'>
                 Planets
             </Link>
             <li className="nav-item">
