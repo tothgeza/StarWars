@@ -1,0 +1,150 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+// $banana: #FFC500;
+$warning: #ffc500;
+// $nav-link-color: $banana;
+// $link-color: $banana;
+// $navbar-dark-color: rgba($banana, .55);
+$navbar-dark-hover-color: rgba($warning, 0.75);
+$navbar-dark-active-color: $warning;
+// $navbar-dark-disabled-color: rgba($banana, .25);
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+// $navbar-dark-toggler-border-color: rgba($banana,.1);
+// $navbar-light-color: #000000;
+// $theme-colors: ( primary: $primary,
+// secondary: $secondary,
+// success: $success,
+// info: $info,
+// warning: $warning,
+// danger: $danger,
+// light: $light,
+// dark: $dark,
+// banana: $banana);
+$font-family-sans-serif: "Roboto";
+@import "../node_modules/bootstrap/scss/bootstrap";
+// .navbar,
+// .footer {
+//     background-color: #000000 !important;
+// }
+.nav-logo {
+    position: relative;
+    left: -15px;
+    top: 2px;
+}
+
+.navbar {
+    position: relative;
+    z-index: 3;
+}
+
+// Table
+table {
+    overflow: hidden;
+}
+
+tr:hover {
+    background-color: #ff0000 !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: #ffc500;
+}
+
+// thead {
+// background-color: rgba($warning, 0.75) !important;
+// background-color: rgba(#e50b0b, 0.75) !important;
+//   color: #000;
+//   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #bc13fe,
+//     0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe, 0 0 151px #bc13fe;
+// }
+thead th {
+    font-weight: 500;
+    font-size: large;
+    color: #fff;
+    // text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ff0000, 0 0 82px #ff0000, 0 0 92px #ff0000, 0 0 102px #ff0000, 0 0 151px #ff0000;
+    color: #fff !important;
+    border: none !important;
+}
+
+tbody {
+    color: $gray-500;
+}
+
+tbody th {
+    font-weight: 400;
+    // font-size: medium;
+    border: none !important;
+}
+
+tbody th:first-of-type {
+    // padding-left: 25px !important;
+}
+
+$own-shadow: 0 0 0.2rem #fff,
+0 0 0.2rem #fff,
+0 0 2rem #ff0000,
+0 0 0.8rem #ff0000,
+0 0 2.8rem #ff0000,
+inset 0 0 1.3rem #ff0000;
+.bdr {
+    border: 0.2rem solid #fff;
+    background: rgba(0, 0, 0, 0.9);
+    // background-blend-mode: screen;
+    border-radius: 2rem;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: $own-shadow;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 4;
+}
+
+body {
+    background-image: url("./img/bg_2.png");
+}
+
+#root {
+    height: 100vh;
+}
+
+// Backgroung animation
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+.twinkling,
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.twinkling {
+    background: transparent url("./img/twinkling.png") repeat top center;
+    z-index: 1;
+    animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+    background: transparent url("./img/clouds.png") repeat top center;
+    z-index: 2;
+    opacity: 0.4;
+    animation: move-clouds-back 200s linear infinite;
+}
