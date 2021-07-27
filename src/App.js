@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 import "../src/style.scss";
 import People from "./People";
+import Planet from "./Planet";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Nav />
         <Switch>
           <Route path="/people" component={People} />
+          <Route path="/planet" component={Planet} />
         </Switch>
         <Footer />
       </div>
