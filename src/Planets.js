@@ -38,7 +38,7 @@ export default function Planets() {
                 </th>
                 <th>{planet.climate}</th>
                 <th>{planet.terrain}</th>
-                <th>{planet.population}</th>
+                <th>{(+planet.population).toLocaleString("en-US")}</th>
               </tr>
             ))}
           </tbody>
