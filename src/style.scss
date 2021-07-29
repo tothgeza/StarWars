@@ -1,111 +1,458 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
-// $banana: #FFC500;
 $warning: #ffc500;
-// $nav-link-color: $banana;
-// $link-color: $banana;
-// $navbar-dark-color: rgba($banana, .55);
+$banana: #ffc400ce;
+$sw-yellow: rgb(255, 194, 59);
 $navbar-dark-hover-color: rgba($warning, 0.75);
+// $own-border-shadow: 0 0 0.2rem #fff,
+// 0 0 0.2rem #fff,
+// 0 0 0.6rem #ff0000,
+// 0 0 0.6rem #ff0000,
+// 0 0 1.8rem #ff0000,
+// inset 0 0 1rem #ff0000;
+$own-border-shadow: 0 0 5px rgba(0, 255, 0, 0.2),
+inset 0 0 5px rgba(0, 255, 0, 0.1),
+0 2px 0 #000;
+// $own-border-shadow: 0 0 5px rgba(255, 194, 59, 0.2),
+// inset 0 0 5px rgba(255, 194, 59, 0.1),
+// 0 2px 0 #000;
+$blue-text-shadow: 0 0 1.2rem #4a7dff,
+0 0 0.6rem #4a7dff,
+0 0 1.8rem #4a7dff;
 $navbar-dark-active-color: $warning;
-// $navbar-dark-disabled-color: rgba($banana, .25);
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-// $navbar-dark-toggler-border-color: rgba($banana,.1);
-// $navbar-light-color: #000000;
-// $theme-colors: ( primary: $primary,
-// secondary: $secondary,
-// success: $success,
-// info: $info,
-// warning: $warning,
-// danger: $danger,
-// light: $light,
-// dark: $dark,
-// banana: $banana);
-$font-family-sans-serif: "Roboto";
+$pagination-color: $warning;
+$pagination-bg: transparent !important;
+$pagination-border-width: 0;
 @import "../node_modules/bootstrap/scss/bootstrap";
-// .navbar,
-// .footer {
-//     background-color: #000000 !important;
-// }
-.nav-logo {
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.page-container {
     position: relative;
-    left: -15px;
-    top: 2px;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    padding-bottom: 4rem;
+}
+
+.my-footer {
+    position: absolute;
+    bottom: 0;
+    height: 4rem;
+    z-index: 4;
 }
 
 .navbar {
-    position: relative;
-    z-index: 3;
+    background-color: transparent !important;
 }
 
-// Table
-table {
-    overflow: hidden;
+.navbar:before,
+.navbar:after {
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    // margin: 0 0 0 -400px;
+    margin: 0 0 0 -400px;
+    position: absolute;
+    width: 800px;
 }
 
-tr:hover {
-    background-color: #ff0000 !important;
-    background: rgba(0, 0, 0, 0.3) !important;
-    color: #ffc500;
+.navbar:before {
+    background: #444;
+    background: linear-gradient(left, #151515, #444, #151515);
+    top: 58px;
 }
 
-// thead {
-// background-color: rgba($warning, 0.75) !important;
-// background-color: rgba(#e50b0b, 0.75) !important;
-//   color: #000;
-//   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #bc13fe,
-//     0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe, 0 0 151px #bc13fe;
-// }
-thead th {
-    font-weight: 500;
-    font-size: large;
-    color: #fff;
-    // text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ff0000, 0 0 82px #ff0000, 0 0 92px #ff0000, 0 0 102px #ff0000, 0 0 151px #ff0000;
-    color: #fff !important;
-    border: none !important;
+.navbar:after {
+    background: #000;
+    background: linear-gradient(left, #151515, #000, #151515);
+    top: 59px;
 }
 
-tbody {
-    color: $gray-500;
-}
-
-tbody th {
-    font-weight: 400;
-    // font-size: medium;
-    border: none !important;
-}
-
-tbody th:first-of-type {
-    // padding-left: 25px !important;
-}
-
-$own-shadow: 0 0 0.2rem #fff,
-0 0 0.2rem #fff,
-0 0 2rem #ff0000,
-0 0 0.8rem #ff0000,
-0 0 2.8rem #ff0000,
-inset 0 0 1.3rem #ff0000;
-.bdr {
-    border: 0.2rem solid #fff;
-    background: rgba(0, 0, 0, 0.9);
-    // background-blend-mode: screen;
-    border-radius: 2rem;
-    overflow: hidden;
+.own-nav {
+    background: #111;
+    background: linear-gradient(#1b1b1b, #111);
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 1px #272727;
+    // display: inline-block;
+    font-size: 0px;
+    margin: 10px auto 0;
     padding: 20px;
-    box-shadow: $own-shadow;
-    margin-left: auto;
-    margin-right: auto;
+    // position: relative;
+    z-index: 4;
+    // height: 70px;
+    min-width: 408px;
+    width: 520px;
+}
+
+.nav-item {
+    height: 40px;
+}
+
+.footer-card {
+    background: #111;
+    background: linear-gradient(#1b1b1b, #111);
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 1px #272727;
+    // display: inline-block;
+    font-family: "Cabin", helvetica, arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-shadow: 0 -1px 0 #000;
+    font-size: 13px;
+    margin: auto 0 0 auto;
+    padding: 10px;
+    // position: relative;
+    z-index: 4;
+    height: 40px;
+    min-width: 300px;
+    width: 280px;
+}
+
+.fl {
+    background-color: transparent !important;
+    clear: both;
+    position: relative;
+    margin-top: -74px;
+}
+
+footer {
+    background-color: transparent !important;
+    clear: both;
+    position: relative;
+    margin-top: -74px;
+}
+
+footer:before,
+footer:after {
+    content: "";
+    display: block;
+    height: 1px;
+    left: -1%;
+    // margin: 0 0 0 -400px;
+    // margin: 0 0 0 -370px;
+    position: relative;
+    // width: 800px;
+    margin: 0 auto 0 auto;
+    // width: 1150px;
+    z-index: -1;
+}
+
+footer:before {
+    background: #444;
+    background: linear-gradient(left, #151515, #444, #151515);
+    top: 20px;
+}
+
+footer:after {
+    background: #000;
+    background: linear-gradient(left, #151515, #000, #151515);
+    top: -20px;
+}
+
+.copyright {
+    position: relative;
+    top: -2px;
+}
+
+.page-link-shadow {
+    color: #21b5ff;
+    font-size: xx-large;
+    text-shadow: $blue-text-shadow;
+}
+
+.top-level {
     position: relative;
     z-index: 4;
 }
 
 body {
     background-image: url("./img/bg_2.png");
+    // background: #151515;
+}
+
+.img {
+    background-size: cover;
+    resize: both;
+    border-radius: 5px 5px 0 0;
+    // width: 221px;
+    height: 290px;
+    background-position: top center;
+    // position: relative;
+    // transition: background 0.5s;
+    // &:hover {
+    //     background-size: 110%;
+    // }
+    // z-index: 4;
+    padding: 5px;
+}
+
+.bdr2 {
+    // background: rgba(17, 17, 17, 0.7);
+    // background: #222;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 1px #272727;
+    color: #888;
+    font-family: "Cabin", helvetica, arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-shadow: 0 -1px 0 #000;
+    overflow: hidden;
+    width: 228px;
+    padding: 3px;
+    margin: 10px 10px 10px 10px !important;
+    position: relative;
+    z-index: 5;
+}
+
+.bdr2:hover {
+    animation: glow 800ms ease-out infinite alternate;
+    // background: #222922;
+    // background: linear-gradient(#393933, #292922);
+    // border-color: #393;
+    border-color: $sw-yellow;
+    box-shadow: 0 0 5px rgba(255, 194, 59, 0.2), inset 0 0 5px rgba(255, 194, 59, 0.1), 0 2px 0 #000;
+    color: #efe;
+    outline: none;
+}
+
+.bdr2:hover {
+    animation: glow 800ms ease-out infinite alternate;
+    border-color: rgb(255, 194, 59);
+    box-shadow: 0 0 5px rgba(255, 194, 59, 0.2), inset 0 0 5px rgba(255, 194, 59, 0.1), 0 2px 0 #000;
+    color: #efe;
+    outline: none;
+}
+
+.bdr {
+    background: #222;
+    background: linear-gradient(#333, #222);
+    border: 1px solid #444;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #000;
+    color: #888;
+    display: block;
+    font-family: "Cabin", helvetica, arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-shadow: 0 -1px 0 #000;
+    width: 228px;
+    padding: 3px;
+    margin: 10px 10px 10px 10px !important;
+}
+
+.bdr:hover {
+    animation: glow 800ms ease-out infinite alternate;
+    background: #222922;
+    background: linear-gradient(#333933, #222922);
+    border-color: #393;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1), 0 2px 0 #000;
+    color: #efe;
+    outline: none;
 }
 
 #root {
     height: 100vh;
 }
 
+// Pagination
 // Backgroung animation
+.twinkling,
+.clouds {
+    position: absolute;
+    top: -10;
+    left: 1;
+    right: 1;
+    bottom: 0;
+    width: 99.9%;
+    height: 99%;
+    display: block;
+}
+
+.twinkling {
+    background: transparent url("./img/twinkling.png") repeat top center;
+    z-index: 1;
+    animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+    background: transparent url("./img/clouds.png") repeat top center;
+    z-index: 2;
+    opacity: 0.4;
+    animation: move-clouds-back 200s linear infinite;
+}
+
+.btn-nav {
+    text-decoration: none !important;
+    text-align: center;
+    background: #222;
+    background: linear-gradient(#333, #222);
+    box-sizing: border-box;
+    border: 1px solid #444;
+    border-radius: 0;
+    border-left-color: #000;
+    box-shadow: 0 2px 0 #000;
+    color: #888;
+    display: block;
+    float: left;
+    font-family: "Cabin", helvetica, arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 0;
+    padding: 0 10px;
+    position: relative;
+    text-shadow: 0 -1px 0 #000;
+    width: 80px;
+}
+
+.btn-nav-frst {
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #444;
+}
+
+.btn-nav-last {
+    border-radius: 0 5px 5px 0;
+}
+
+.btn-nav:hover,
+.btn-nav:focus {
+    background: #292929;
+    background: linear-gradient(#393939, #292929);
+    // color: #5f5;
+    color: #ffc500;
+    outline: none important;
+    box-shadow: none;
+}
+
+.btn-nav:active {
+    background: #292929;
+    background: linear-gradient(#393939, #292929);
+    box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
+    outline: none important;
+    box-shadow: none;
+    top: 1px;
+}
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+.flip-card {
+    // background: #222;
+    // border: 1px solid #444;
+    // border-radius: 5px;
+    // box-shadow: 0 2px 0 #000;
+    // color: #888;
+    // display: block;
+    width: 228px;
+    height: 340px;
+    padding: 3px;
+    margin: 10px 10px 10px 10px !important;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+
+/* This container is needed to position the front and back side */
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: -14px;
+    top: -14px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* Position the front and back side */
+
+.flip-card-front,
+.flip-card-back {
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #000;
+    color: #888;
+    display: block;
+    font-family: "Cabin", helvetica, arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-shadow: 0 -2px 0 #000;
+    width: 228px;
+    height: 340px;
+    margin: 10px 10px 10px 10px !important;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+
+/* Style the front side (fallback if image is missing) */
+
+.flip-card-front {
+    // color: black;
+    .card-body {
+        padding: 12px;
+    }
+}
+
+
+/* Style the back side */
+
+.flip-card-back {
+    left: -27px;
+    transform: rotateY(180deg);
+    .card-text {
+        text-shadow: 0 -1px 0 #000;
+    }
+    animation: glow 800ms ease-out infinite alternate;
+    background: #222922;
+    background: linear-gradient(#333933,
+    #222922);
+    border-color: #393;
+    box-shadow: 0 0 5px rgba(0,
+    255,
+    0,
+    0.2),
+    inset 0 0 5px rgba(0,
+    255,
+    0,
+    0.1),
+    0 2px 0 #000;
+    color: #efe;
+    outline: none;
+}
+
+@keyframes glow {
+    0% {
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1), 0 2px 0 #000;
+    }
+    100% {
+        border-color: #6f6;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.6), inset 0 0 10px rgba(0, 255, 0, 0.4), 0 2px 0 #000;
+    }
+}
+
 @keyframes move-twink-back {
     from {
         background-position: 0 0;
@@ -122,29 +469,4 @@ body {
     to {
         background-position: 10000px 0;
     }
-}
-
-.twinkling,
-.clouds {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.twinkling {
-    background: transparent url("./img/twinkling.png") repeat top center;
-    z-index: 1;
-    animation: move-twink-back 200s linear infinite;
-}
-
-.clouds {
-    background: transparent url("./img/clouds.png") repeat top center;
-    z-index: 2;
-    opacity: 0.4;
-    animation: move-clouds-back 200s linear infinite;
 }

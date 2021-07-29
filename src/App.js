@@ -1,25 +1,30 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Nav from "./Nav";
-import Footer from "./Footer";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import "../src/style.scss";
-import People from "./People";
-import Planets from "./Planets";
+import People from "./components/People";
+import Planets from "./components/Planets";
 
 function App() {
-  return (
-    <Router>
-      <div className="border d-sm-flex flex-column h-100">
-        <div class="twinkling"></div>
-        <Nav />
-        <Switch>
-          <Route path="/people" component={People} />
-          <Route path="/planets" component={Planets} />
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
-  );
+	return (
+		<Router>
+			<div>
+				<div class="twinkling"> </div>
+				<div class="clouds"> </div>
+				<div className="container page-container">
+					<div className=" content-wrapper">
+						<Nav />
+						<Switch>
+							<Route path="/people" component={People} />
+							<Route path="/planets" component={Planets} />
+						</Switch>
+					</div>
+					<Footer />
+				</div>
+			</div>
+		</Router>
+	);
 }
 
 export default App;
