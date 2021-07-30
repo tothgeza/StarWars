@@ -26,7 +26,7 @@ export default function Nav() {
 						className="collapse navbar-collapse justify-content-center"
 						id="navbarTogglerDemo02"
 					>
-						<ul className="navbar-nav mb-2 mb-lg-0">
+						<ul className="navbar-nav mb-lg-0">
 							{/* <li className="nav-item">
 								<div className="nav-logo"></div>
 							</li> */}

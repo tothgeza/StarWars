@@ -13,8 +13,8 @@ function App() {
 			<div>
 				<div class="twinkling"> </div>
 				<div class="clouds"> </div>
-				<div className="container page-container">
-					<div className=" content-wrapper">
+				<div className="container-sm page-container">
+					<div className="content-wrapper">
 						<Nav />
 						<Switch>
 							<Route path="/people" component={People} />
