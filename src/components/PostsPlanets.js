@@ -27,7 +27,7 @@ export default function PostsPlanets({ posts, loading }) {
 								/>
 							</div>
 							<div class="card-body text-center">
-								<h5 class="card-title">{post.name}</h5>
+								<h6 class="card-title text-warning">{post.name}</h6>
 							</div>
 						</div>
 						<div className="flip-card-back">
@@ -37,7 +37,7 @@ export default function PostsPlanets({ posts, loading }) {
 									<p className="mb-0">
 										Diameter:{" "}
 										{parseInt(post.diameter).toLocaleString("en-US").toString()}{" "}
-										cm
+										Km
 									</p>
 									<p className="mb-0">Climate: {post.climate}</p>
 									<p className="mb-0">Gravity: {post.gravity}</p>
