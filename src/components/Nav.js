@@ -36,7 +36,7 @@ export default function Nav() {
 							<Link className="nav-item" to="/planets">
 								<button className="btn-nav">Planets</button>
 							</Link>
-							<Link className="nav-item">
+							<Link className="nav-item" to="/films">
 								<button className="btn-nav">Films</button>
 							</Link>
 							<Link className="nav-item ">
