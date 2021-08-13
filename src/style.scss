@@ -193,32 +193,32 @@ body {
     padding: 5px;
 }
 
-.bdr {
-    background: #222;
-    background: linear-gradient(#333, #222);
-    border: 1px solid #444;
-    border-radius: 5px;
-    box-shadow: 0 2px 0 #000;
-    color: #888;
-    display: block;
-    font-family: "Cabin", helvetica, arial, sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    text-shadow: 0 -1px 0 #000;
-    width: 200px;
-    padding: 3px;
-    margin: 10px 10px 10px 10px !important;
-}
+// .bdr {
+//     background: #222;
+//     background: linear-gradient(#333, #222);
+//     border: 1px solid #444;
+//     border-radius: 5px;
+//     box-shadow: 0 2px 0 #000;
+//     color: #888;
+//     display: block;
+//     font-family: "Cabin", helvetica, arial, sans-serif;
+//     font-size: 13px;
+//     font-weight: 400;
+//     text-shadow: 0 -1px 0 #000;
+//     width: 200px;
+//     padding: 3px;
+//     margin: 10px 10px 10px 10px !important;
+// }
 
-.bdr:hover {
-    animation: glow 800ms ease-out infinite alternate;
-    background: #222922;
-    background: linear-gradient(#333933, #222922);
-    border-color: #393;
-    box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1), 0 2px 0 #000;
-    color: #efe;
-    outline: none;
-}
+// .bdr:hover {
+//     animation: glow 800ms ease-out infinite alternate;
+//     background: #222922;
+//     background: linear-gradient(#333933, #222922);
+//     border-color: #393;
+//     box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1), 0 2px 0 #000;
+//     color: #efe;
+//     outline: none;
+// }
 
 #root {
     height: 100vh;
@@ -368,7 +368,7 @@ body {
 /* Style the front side (fallback if image is missing) */
 
 .flip-card-front {
-    // color: black;
+    // color: rgb(170, 170, 170);
     left: -14px;
     .card-body {
         padding: 12px;
@@ -383,12 +383,10 @@ body {
     .card-text {
         text-shadow: 0 -1px 0 #000;
     }
-    animation: glow 800ms ease-out infinite alternate;
-    background: #222922;
-    background: linear-gradient(#333933, #222922);
+    background: #292922;
     border-color: #ffc500;
     box-shadow: 0 0 5px rgba(255, 225, 0, 0.2), inset 0 0 5px rgba(255, 225, 0, 0.1), 0 2px 0 #000;
-    color: #efe;
+    color: rgb(170, 170, 170);
     outline: none;
 }
 

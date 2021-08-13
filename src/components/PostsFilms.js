@@ -30,7 +30,7 @@ export default function PostsPeople({ posts, loading }) {
 										/>
 									</div>
 									<div class="card-body text-center">
-										<h6 class="card-title text-warning">{post.title}</h6>
+										<h6 class="card-title">{post.title}</h6>
 									</div>
 								</div>
 								<div className="flip-card-back">

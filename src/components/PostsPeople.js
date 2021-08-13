@@ -13,7 +13,6 @@ export default function PostsPeople({ posts, loading }) {
 	}
 
 	return (
-		// <div className="conatiner-md row d-flex justify-content-evenly mb-5">
 		<div className="container-xxl mb-5">
 			<div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 justify-content-center">
 				{posts.results.map((post) => (
@@ -28,7 +27,7 @@ export default function PostsPeople({ posts, loading }) {
 										}}
 									/>
 									<div class="card-body text-center">
-										<h6 class="card-title text-warning">{post.name}</h6>
+										<h6 class="card-title">{post.name}</h6>
 									</div>
 								</div>
 								<div className="flip-card-back">
