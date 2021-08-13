@@ -7,6 +7,7 @@ import People from "./components/People";
 import Planets from "./components/Planets";
 import Films from "./components/Films";
 import Species from "./components/Species";
+import Vehicles from "./components/Vehicles";
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 							<Route path="/planets" component={Planets} />
 							<Route path="/films" component={Films} />
 							<Route path="/species" component={Species} />
+							<Route path="/vehicles" component={Vehicles} />
 						</Switch>
 					</div>
 					<Footer />

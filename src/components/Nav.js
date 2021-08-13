@@ -42,7 +42,7 @@ export default function Nav() {
 							<Link className="nav-item btn-nav" to="/species">
 								Species
 							</Link>
-							<Link className="nav-item btn-nav" activeClassName="selected">
+							<Link className="nav-item btn-nav" to="/vehicles">
 								Vechicles
 							</Link>
 							<Link className="nav-item btn-nav-last" activeClassName="selected">
