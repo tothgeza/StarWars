@@ -9,15 +9,11 @@ $navbar-dark-hover-color: rgba($warning, 0.75);
 // 0 0 0.6rem #ff0000,
 // 0 0 1.8rem #ff0000,
 // inset 0 0 1rem #ff0000;
-$own-border-shadow: 0 0 5px rgba(0, 255, 0, 0.2),
-inset 0 0 5px rgba(0, 255, 0, 0.1),
-0 2px 0 #000;
+$own-border-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1), 0 2px 0 #000;
 // $own-border-shadow: 0 0 5px rgba(255, 194, 59, 0.2),
 // inset 0 0 5px rgba(255, 194, 59, 0.1),
 // 0 2px 0 #000;
-$blue-text-shadow: 0 0 1.2rem #4a7dff,
-0 0 0.6rem #4a7dff,
-0 0 1.8rem #4a7dff;
+$blue-text-shadow: 0 0 1.2rem #4a7dff, 0 0 0.6rem #4a7dff, 0 0 1.8rem #4a7dff;
 $navbar-dark-active-color: $warning;
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $pagination-color: $warning;
@@ -311,7 +307,6 @@ body {
     top: 1px;
 }
 
-
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 
 .flip-card {
@@ -329,7 +324,6 @@ body {
     /* Remove this if you don't want the 3D effect */
 }
 
-
 /* This container is needed to position the front and back side */
 
 .flip-card-inner {
@@ -342,13 +336,11 @@ body {
     transform-style: preserve-3d;
 }
 
-
 /* Do an horizontal flip when you move the mouse over the flip box container */
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
-
 
 /* Position the front and back side */
 
@@ -373,7 +365,6 @@ body {
     backface-visibility: hidden;
 }
 
-
 /* Style the front side (fallback if image is missing) */
 
 .flip-card-front {
@@ -383,7 +374,6 @@ body {
         padding: 12px;
     }
 }
-
 
 /* Style the back side */
 
@@ -395,18 +385,9 @@ body {
     }
     animation: glow 800ms ease-out infinite alternate;
     background: #222922;
-    background: linear-gradient(#333933,
-    #222922);
-    border-color: #393;
-    box-shadow: 0 0 5px rgba(0,
-    255,
-    0,
-    0.2),
-    inset 0 0 5px rgba(0,
-    255,
-    0,
-    0.1),
-    0 2px 0 #000;
+    background: linear-gradient(#333933, #222922);
+    border-color: #ffc500;
+    box-shadow: 0 0 5px rgba(255, 225, 0, 0.2), inset 0 0 5px rgba(255, 225, 0, 0.1), 0 2px 0 #000;
     color: #efe;
     outline: none;
 }
@@ -423,12 +404,14 @@ body {
 
 @keyframes glow {
     0% {
-        border-color: #393;
-        box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1), 0 2px 0 #000;
+        // border-color: #393;
+        border-color: #ffc500;
+        box-shadow: 0 0 5px rgba(255, 225, 0, 0.2), inset 0 0 5px rgba(255, 225, 0, 0.1), 0 2px 0 #000;
     }
     100% {
-        border-color: #6f6;
-        box-shadow: 0 0 20px rgba(0, 255, 0, 0.6), inset 0 0 10px rgba(0, 255, 0, 0.4), 0 2px 0 #000;
+        // border-color: #6f6;
+        border-color: #ffe100;
+        box-shadow: 0 0 20px rgba(255, 225, 0, 0.6), inset 0 0 10px rgba(255, 225, 0, 0.4), 0 2px 0 #000;
     }
 }
 
