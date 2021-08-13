@@ -182,7 +182,7 @@ body {
     resize: both;
     border-radius: 5px 5px 0 0;
     // width: 221px;
-    height: 250px;
+    height: 260px;
     background-position: top center;
     // position: relative;
     // transition: background 0.5s;
@@ -402,6 +402,9 @@ body {
     // top: 1px;
 }
 
+.flip-card-front .card-body{
+    padding: 12px 6px;
+}
 // @keyframes glow {
 //     0% {
 //         // border-color: #393;
