@@ -402,18 +402,18 @@ body {
     // top: 1px;
 }
 
-@keyframes glow {
-    0% {
-        // border-color: #393;
-        border-color: #ffc500;
-        box-shadow: 0 0 5px rgba(255, 225, 0, 0.2), inset 0 0 5px rgba(255, 225, 0, 0.1), 0 2px 0 #000;
-    }
-    100% {
-        // border-color: #6f6;
-        border-color: #ffe100;
-        box-shadow: 0 0 20px rgba(255, 225, 0, 0.6), inset 0 0 10px rgba(255, 225, 0, 0.4), 0 2px 0 #000;
-    }
-}
+// @keyframes glow {
+//     0% {
+//         // border-color: #393;
+//         border-color: #ffc500;
+//         box-shadow: 0 0 5px rgba(255, 225, 0, 0.2), inset 0 0 5px rgba(255, 225, 0, 0.1), 0 2px 0 #000;
+//     }
+//     100% {
+//         // border-color: #6f6;
+//         border-color: #ffe100;
+//         box-shadow: 0 0 20px rgba(255, 225, 0, 0.6), inset 0 0 10px rgba(255, 225, 0, 0.4), 0 2px 0 #000;
+//     }
+// }
 
 @keyframes move-twink-back {
     from {
