@@ -21,14 +21,12 @@ export default function PostsPeople({ posts, loading }) {
 						<div className="flip-card">
 							<div className="flip-card-inner">
 								<div className="flip-card-front">
-									<div>
 										<div
 											className="img"
 											style={{
 												backgroundImage: `url(${imgURL + getId(post.url)}.jpg)`,
 											}}
 										/>
-									</div>
 									<div class="card-body text-center">
 										<h6 class="card-title text-warning">{post.name}</h6>
 									</div>

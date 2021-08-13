@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ReactComponent as StarWars } from "../img/sw_logo4.svg";
 
 export default function Nav() {
@@ -30,23 +30,23 @@ export default function Nav() {
 							{/* <li className="nav-item">
 								<div className="nav-logo"></div>
 							</li> */}
-							<Link className="nav-item" to="/people">
-								<button className="btn-nav btn-nav-frst">People</button>
+							<NavLink className="nav-item btn-nav btn-nav-frst" to="/people">
+								People
+							</NavLink>
+							<Link className="nav-item btn-nav" to="/planets">
+								Planets
 							</Link>
-							<Link className="nav-item" to="/planets">
-								<button className="btn-nav">Planets</button>
+							<Link className="nav-item btn-nav" to="/films" >
+								Films
 							</Link>
-							<Link className="nav-item" to="/films">
-								<button className="btn-nav">Films</button>
+							<Link className="nav-item btn-nav" activeClassName="selected">
+								Species
 							</Link>
-							<Link className="nav-item ">
-								<button className="btn-nav">Species</button>
+							<Link className="nav-item btn-nav" activeClassName="selected">
+								Vechicles
 							</Link>
-							<Link className="nav-item">
-								<button className="btn-nav">Vechicles</button>
-							</Link>
-							<Link className="nav-item">
-								<button className="btn-nav btn-nav-last">Starships</button>
+							<Link className="nav-item btn-nav-last" activeClassName="selected">
+								Starships
 							</Link>
 						</ul>
 					</div>
