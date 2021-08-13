@@ -6,6 +6,7 @@ import "../src/style.scss";
 import People from "./components/People";
 import Planets from "./components/Planets";
 import Films from "./components/Films";
+import Species from "./components/Species";
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 							<Route path="/people" component={People} />
 							<Route path="/planets" component={Planets} />
 							<Route path="/films" component={Films} />
+							<Route path="/species" component={Species} />
 						</Switch>
 					</div>
 					<Footer />

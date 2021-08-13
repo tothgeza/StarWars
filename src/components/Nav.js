@@ -39,7 +39,7 @@ export default function Nav() {
 							<Link className="nav-item btn-nav" to="/films" >
 								Films
 							</Link>
-							<Link className="nav-item btn-nav" activeClassName="selected">
+							<Link className="nav-item btn-nav" to="/species">
 								Species
 							</Link>
 							<Link className="nav-item btn-nav" activeClassName="selected">
