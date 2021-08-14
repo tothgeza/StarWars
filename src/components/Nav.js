@@ -45,7 +45,7 @@ export default function Nav() {
 							<Link className="nav-item btn-nav" to="/vehicles">
 								Vechicles
 							</Link>
-							<Link className="nav-item btn-nav btn-nav-last" activeClassName="selected">
+							<Link className="nav-item btn-nav btn-nav-last" to="/starships">
 								Starships
 							</Link>
 						</ul>

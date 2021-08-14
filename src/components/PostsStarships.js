@@ -3,8 +3,8 @@ import Loader from "../utils/Loader";
 import TruncateMarkup from "react-truncate-markup";
 import { FaCoins } from "react-icons/fa";
 
-export default function PostsVechicles({ posts, loading }) {
-	const imgURL = "https://starwars-visualguide.com/assets/img/vehicles/";
+export default function PostsStarships({ posts, loading }) {
+	const imgURL = "https://starwars-visualguide.com/assets/img/starships/";
 
 	function getId(url) {
 		return url.split("/")[url.split("/").length - 2];
@@ -46,14 +46,13 @@ export default function PostsVechicles({ posts, loading }) {
 											{post.name}
 										</h6>
 										<div className="card-text">
+											<p className="mb-0">
+												<strong>Model: </strong>
+												<em>{post.model} cm</em>
+											</p>
 											<TruncateMarkup lines={2}>
 												<p className="mb-0">
-													<strong>Model: </strong> <em>{post.model}</em>
-												</p>
-											</TruncateMarkup>
-											<TruncateMarkup lines={3}>
-												<p className="mb-0">
-													<strong>Manufacturer: </strong>{" "}
+													<strong>Manufacturer: </strong>
 													<em>{post.manufacturer}</em>
 												</p>
 											</TruncateMarkup>
@@ -80,11 +79,20 @@ export default function PostsVechicles({ posts, loading }) {
 												)}
 											</p>
 											<p className="mb-0">
-												<strong>Length: </strong> <em>{post.length} m</em>
+												<strong>Length: </strong>{" "}
+												<em>
+													{parseInt(post.length)
+														.toLocaleString("en-US")
+														.toString() + " m"}
+												</em>
 											</p>
 											<p className="mb-0">
-												<strong>Max Speed: </strong>{" "}
-												<em>{post.max_atmosphering_speed} Km/h</em>
+												<strong>Max Speed: </strong>
+												<em>
+													{post.max_atmosphering_speed !== "n/a"
+														? post.max_atmosphering_speed + " Km/h"
+														: "n/a"}
+												</em>
 											</p>
 											<p className="mb-0">
 												<strong>Crew: </strong> <em>{post.crew}</em>
@@ -93,8 +101,12 @@ export default function PostsVechicles({ posts, loading }) {
 												<strong>Passengers: </strong> <em>{post.passengers}</em>
 											</p>
 											<p className="mb-0">
-												<strong>Vehicle Class: </strong>{" "}
-												<em>{post.vehicle_class}</em>
+												<strong>Hyperdrive Rating: </strong>{" "}
+												<em>{post.hyperdrive_rating}</em>
+											</p>
+											<p className="mb-0">
+												<strong>Starship Class: </strong>{" "}
+												<em>{post.starship_class}</em>
 											</p>
 										</div>
 									</div>

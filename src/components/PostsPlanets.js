@@ -38,7 +38,7 @@ export default function PostsPlanets({ posts, loading }) {
 										style={{ height: "300px" }}
 									>
 										<h6 className="card-title text-center mx-auto">{post.name}</h6>
-										<div className="card-text mt-4">
+										<div className="card-text">
 											<p className="mb-0">
 												<strong>Diameter: </strong>
 												<em>
