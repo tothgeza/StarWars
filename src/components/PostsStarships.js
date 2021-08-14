@@ -48,7 +48,7 @@ export default function PostsStarships({ posts, loading }) {
 										<div className="card-text">
 											<p className="mb-0">
 												<strong>Model: </strong>
-												<em>{post.model} cm</em>
+												<em>{post.model}</em>
 											</p>
 											<TruncateMarkup lines={2}>
 												<p className="mb-0">

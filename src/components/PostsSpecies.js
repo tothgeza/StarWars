@@ -52,7 +52,7 @@ export default function PostsSpecies({ posts, loading }) {
 											</p>
 											<p className="mb-0">
 												<strong>Avarage Height: </strong>
-												<em>{post.average_height} cm</em>
+												<em>{post.average_height !== 'n/a' ? post.average_height + ' cm' : 'n/a'}</em>
 											</p>
 											<p className="mb-0">
 												<strong>Skin Colors: </strong>
