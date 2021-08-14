@@ -43,7 +43,7 @@ export default function Planets() {
 					paginate={paginate}
 					currentPage={currentPage}
 				/>
-				<Cards posts={planets} loading={loading} type='planets'/>
+				<Cards posts={planets} loading={loading} type="planets" rowNumber={9} />
 			</div>
 		</div>
 	);

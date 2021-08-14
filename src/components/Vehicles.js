@@ -42,7 +42,7 @@ function Vehicles() {
 				paginate={paginate}
 				currentPage={currentPage}
 			/>
-			<Cards posts={vehicles} loading={loading} type="vehicles"/>
+			<Cards posts={vehicles} loading={loading} type="vehicles" rowNumber={10} />
 		</div>
 	);
 }

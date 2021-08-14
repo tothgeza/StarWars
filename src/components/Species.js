@@ -42,7 +42,7 @@ function Species() {
 				paginate={paginate}
 				currentPage={currentPage}
 			/>
-			<Cards posts={species} loading={loading} type='species' />
+			<Cards posts={species} loading={loading} type="species" rowNumber={8} />
 		</div>
 	);
 }

@@ -42,7 +42,12 @@ function Starships() {
 				paginate={paginate}
 				currentPage={currentPage}
 			/>
-			<Cards posts={starships} loading={loading} type="starships" />
+			<Cards
+				posts={starships}
+				loading={loading}
+				type="starships"
+				rowNumber={8}
+			/>
 		</div>
 	);
 }

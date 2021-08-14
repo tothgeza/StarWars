@@ -42,7 +42,7 @@ function People() {
 				paginate={paginate}
 				currentPage={currentPage}
 			/>
-			<Cards posts={people} loading={loading} type="people"/>
+			<Cards posts={people} loading={loading} type="people" rowNumber={8}/>
 		</div>
 	);
 }

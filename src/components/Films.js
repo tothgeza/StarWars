@@ -42,7 +42,7 @@ function Films() {
 				paginate={paginate}
 				currentPage={currentPage}
 			/>
-			<Cards posts={films} loading={loading} type="films" />
+			<Cards posts={films} loading={loading} type="films" rowNumber={8} />
 		</div>
 	);
 }
