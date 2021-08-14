@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "./Pagination";
-import PostsPeople from "./PostsPeople";
+import Cards from "./Cards";
 
 function People() {
 	const [people, setPeople] = useState({
@@ -42,7 +42,7 @@ function People() {
 				paginate={paginate}
 				currentPage={currentPage}
 			/>
-			<PostsPeople posts={people} loading={loading} />
+			<Cards posts={people} loading={loading} type="people"/>
 		</div>
 	);
 }

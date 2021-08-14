@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "./Pagination";
-import PostsPlanets from "./PostsPlanets";
+import Cards from "./Cards";
 
 export default function Planets() {
 	const [planets, setPlanets] = useState({
@@ -43,7 +43,7 @@ export default function Planets() {
 					paginate={paginate}
 					currentPage={currentPage}
 				/>
-				<PostsPlanets posts={planets} loading={loading} />
+				<Cards posts={planets} loading={loading} type='planets'/>
 			</div>
 		</div>
 	);

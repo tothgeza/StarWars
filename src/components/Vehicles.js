@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "./Pagination";
-import PostsVehicles from "./PostsVehicles";
+import Cards from "./Cards";
 
 function Vehicles() {
 	const [vehicles, setVehicles] = useState({
@@ -42,7 +42,7 @@ function Vehicles() {
 				paginate={paginate}
 				currentPage={currentPage}
 			/>
-			<PostsVehicles posts={vehicles} loading={loading} />
+			<Cards posts={vehicles} loading={loading} type="vehicles"/>
 		</div>
 	);
 }

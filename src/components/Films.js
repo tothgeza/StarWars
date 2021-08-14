@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "./Pagination";
-import PostsFilms from "./PostsFilms";
+import Cards from "./Cards";
 
 function Films() {
 	const [films, setFilms] = useState({
@@ -42,7 +42,7 @@ function Films() {
 				paginate={paginate}
 				currentPage={currentPage}
 			/>
-			<PostsFilms posts={films} loading={loading} />
+			<Cards posts={films} loading={loading} type="films" />
 		</div>
 	);
 }

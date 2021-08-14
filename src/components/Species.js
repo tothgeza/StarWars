@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "./Pagination";
-import PostsSpecies from "./PostsSpecies";
+import Cards from "./Cards";
 
 function Species() {
 	const [species, setSpecies] = useState({
@@ -42,7 +42,7 @@ function Species() {
 				paginate={paginate}
 				currentPage={currentPage}
 			/>
-			<PostsSpecies posts={species} loading={loading} />
+			<Cards posts={species} loading={loading} type='species' />
 		</div>
 	);
 }
