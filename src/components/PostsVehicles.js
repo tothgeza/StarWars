@@ -27,45 +27,57 @@ export default function PostsVechicles({ posts, loading }) {
 											backgroundImage: `url(${imgURL + getId(post.url)}.jpg)`,
 										}}
 									/>
-									<div class="card-body text-center">
+									<div className="card-body text-center">
 										<TruncateMarkup lines={1}>
-											<h6 class="card-title">{post.name}</h6>
+											<h6 className="card-title">{post.name}</h6>
 										</TruncateMarkup>
 									</div>
 								</div>
 								<div className="flip-card-back">
-									<div class="card-body">
-										<h5 class="card-title text-center">{post.name}</h5>
-										<p class="card-text mt-2">
+									<div
+										className="card-body d-flex align-content-start flex-wrap"
+										style={{ height: "300px" }}
+									>
+										<h6
+											className="card-title text-center mx-auto"
+											style={{ minWidth: "150px" }}
+										>
+											{post.name}
+										</h6>
+										<div className="card-text">
 											<TruncateMarkup lines={2}>
 												<p className="mb-0">
-													<strong>Model:</strong> <em>{post.model}</em>
+													<strong>Model: </strong> <em>{post.model}</em>
 												</p>
 											</TruncateMarkup>
 											<TruncateMarkup lines={3}>
 												<p className="mb-0">
-													<strong>Manufacturer:</strong> <em>{post.manufacturer}</em>
+													<strong>Manufacturer: </strong>{" "}
+													<em>{post.manufacturer}</em>
 												</p>
 											</TruncateMarkup>
 											<p className="mb-0">
-												<strong>Cost In Credits:</strong> <em>{post.cost_in_credits}</em>
+												<strong>Cost In Credits: </strong>{" "}
+												<em>{post.cost_in_credits}</em>
 											</p>
 											<p className="mb-0">
-												<strong>Length:</strong> <em>{post.length} m</em>
+												<strong>Length: </strong> <em>{post.length} m</em>
 											</p>
 											<p className="mb-0">
-												<strong>Max Speed:</strong>	<em>{post.max_atmosphering_speed} Km/h</em>
+												<strong>Max Speed: </strong>{" "}
+												<em>{post.max_atmosphering_speed} Km/h</em>
 											</p>
 											<p className="mb-0">
-												<strong>Crew:</strong> <em>{post.crew}</em>
+												<strong>Crew: </strong> <em>{post.crew}</em>
 											</p>
 											<p className="mb-0">
-												<strong>Passengers:</strong> <em>{post.passengers}</em>
+												<strong>Passengers: </strong> <em>{post.passengers}</em>
 											</p>
 											<p className="mb-0">
-												<strong>Vehicle Class:</strong>	<em>{post.vehicle_class}</em>
+												<strong>Vehicle Class: </strong>{" "}
+												<em>{post.vehicle_class}</em>
 											</p>
-										</p>
+										</div>
 									</div>
 								</div>
 							</div>

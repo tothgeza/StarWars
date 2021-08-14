@@ -26,28 +26,57 @@ export default function PostsSpecies({ posts, loading }) {
 											backgroundImage: `url(${imgURL + getId(post.url)}.jpg)`,
 										}}
 									/>
-									<div class="card-body text-center">
-										<h6 class="card-title">{post.name}</h6>
+									<div className="card-body text-center">
+										<h6 className="card-title">{post.name}</h6>
 									</div>
 								</div>
 								<div className="flip-card-back">
-									<div class="card-body">
-										<h5 class="card-title text-center">{post.name}</h5>
-										<p class="card-text mt-4">
+									<div
+										className="card-body d-flex align-content-start flex-wrap"
+										style={{ height: "300px" }}
+									>
+										<h6
+											className="card-title text-center mx-auto"
+											style={{ minWidth: "150px" }}
+										>
+											{post.name}
+										</h6>
+										<div className="card-text">
 											<p className="mb-0">
-												Classification: {post.classification}
+												<strong>Classification: </strong>
+												<em>{post.classification}</em>
 											</p>
-											<p className="mb-0">Designation: {post.designation}</p>
 											<p className="mb-0">
-												Avarage Height: {post.average_height} cm
+												<strong>Designation: </strong>
+												<em>{post.designation}</em>
 											</p>
-											<p className="mb-0">Skin Colors: {post.skin_colors}</p>
-											<p className="mb-0">Hair Colors: {post.hair_colors}</p>
-											<p className="mb-0">Eye Colors: {post.eye_colors}</p>
 											<p className="mb-0">
-												Avarage Lifespan: {post.average_lifespan !== 'unknown' ? post.average_lifespan + ' years' : 'unknown'}											</p>
-											<p className="mb-0">Language: {post.language}</p>
-										</p>
+												<strong>Avarage Height: </strong>
+												<em>{post.average_height} cm</em>
+											</p>
+											<p className="mb-0">
+												<strong>Skin Colors: </strong>
+												<em>{post.skin_colors}</em>
+											</p>
+											<p className="mb-0">
+												<strong>Hair Colors: </strong>{" "}
+												<em>{post.hair_colors}</em>
+											</p>
+											<p className="mb-0">
+												<strong>Eye Colors: </strong> <em>{post.eye_colors}</em>
+											</p>
+											<p className="mb-0">
+												<strong>Avarage Lifespan: </strong>
+												<em>
+													{post.average_lifespan !== "unknown"
+														? post.average_lifespan + " years"
+														: "unknown"}
+												</em>
+											</p>
+											<p className="mb-0">
+												<strong>Language: </strong> <em>{post.language}</em>
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>

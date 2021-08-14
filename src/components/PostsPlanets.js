@@ -33,29 +33,41 @@ export default function PostsPlanets({ posts, loading }) {
 									</div>
 								</div>
 								<div className="flip-card-back">
-									<div class="card-body">
-										<h5 class="card-title text-center">{post.name}</h5>
-										<p class="card-text mt-4">
+									<div
+										className="card-body d-flex flex-column align-content-stretch flex-wrap"
+										style={{ height: "300px" }}
+									>
+										<h6 className="card-title text-center mx-auto">{post.name}</h6>
+										<div className="card-text mt-4">
 											<p className="mb-0">
-												Diameter:{" "}
-												{parseInt(post.diameter)
-													.toLocaleString("en-US")
-													.toString()}{" "}
-												Km
-											</p>
-											<p className="mb-0">Climate: {post.climate}</p>
-											<p className="mb-0">Gravity: {post.gravity}</p>
-											<p className="mb-0">Terrain: {post.terrain}</p>
-											<p className="mb-0">
-												Surface Water: {post.surface_water}%
+												<strong>Diameter: </strong>
+												<em>
+													{parseInt(post.diameter)
+														.toLocaleString("en-US")
+														.toString()} Km</em>
 											</p>
 											<p className="mb-0">
-												Population:{" "}
-												{parseInt(post.population)
-													.toLocaleString("en-US")
-													.toString()}
+												<strong>Climate:</strong> <em>{post.climate}</em>
 											</p>
-										</p>
+											<p className="mb-0">
+												<strong>Gravity:</strong> <em>{post.gravity}</em>
+											</p>
+											<p className="mb-0">
+												<strong>Terrain:</strong> <em>{post.terrain}</em>
+											</p>
+											<p className="mb-0">
+												<strong>Surface Water:</strong>{" "}
+												<em>{post.surface_water}%</em>
+											</p>
+											<p className="mb-0">
+												<strong>Population: </strong>
+												<em>
+													{parseInt(post.population)
+														.toLocaleString("en-US")
+														.toString()}
+												</em>
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>

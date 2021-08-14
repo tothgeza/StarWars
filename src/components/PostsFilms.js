@@ -29,23 +29,33 @@ export default function PostsPeople({ posts, loading }) {
 											}}
 										/>
 									</div>
-									<div class="card-body text-center">
-										<h6 class="card-title">{post.title}</h6>
+									<div className="card-body text-center">
+										<h6 className="card-title">{post.title}</h6>
 									</div>
 								</div>
 								<div className="flip-card-back">
-									<div class="card-body">
-										<p class="card-text mt-2">
-											<p className="mb-0">Dirtector: {post.director}</p>
-											<p className="mb-0">Producer: {post.producer}</p>
-											<p className="mb-0">Release Date: {post.release_date}</p>
+									<div
+										className="card-body d-flex align-content-stretch flex-wrap"
+										style={{ height: "300px" }}
+									>
+										<div className="card-text">
+											<p className="mb-0">
+												<strong>Dirtector:</strong> <em>{post.director}</em>
+											</p>
+											<p className="mb-0">
+												<strong>Producer:</strong> <em>{post.producer}</em>
+											</p>
+											<p className="mb-0">
+												<strong>Release Date:</strong>{" "}
+												<em>{post.release_date}</em>
+											</p>
 											<br />
 											<p className="mb-0">
-												<TruncateMarkup lines={8}>
-													<div>{post.opening_crawl}</div>
+												<TruncateMarkup lines={7}>
+													<p>{post.opening_crawl}</p>
 												</TruncateMarkup>
 											</p>
-										</p>
+										</div>
 									</div>
 								</div>
 							</div>

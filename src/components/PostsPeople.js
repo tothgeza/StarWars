@@ -26,21 +26,42 @@ export default function PostsPeople({ posts, loading }) {
 											backgroundImage: `url(${imgURL + getId(post.url)}.jpg)`,
 										}}
 									/>
-									<div class="card-body text-center">
-										<h6 class="card-title">{post.name}</h6>
+									<div className="card-body text-center">
+										<h6 className="card-title">{post.name}</h6>
 									</div>
 								</div>
 								<div className="flip-card-back">
-									<div class="card-body">
-										<h5 class="card-title text-center">{post.name}</h5>
-										<p class="card-text mt-4">
-											<p className="mb-0">Height: {post.height} cm</p>
-											<p className="mb-0">Mass: {post.mass} Kg</p>
-											<p className="mb-0">Hair Color: {post.hair_color}</p>
-											<p className="mb-0">Eye: {post.eye_color}</p>
-											<p className="mb-0">Gender: {post.gender}</p>
-											<p className="mb-0">Birth Year: {post.birth_year}</p>
-										</p>
+									<div
+										className="card-body d-flex align-content-start flex-wrap"
+										style={{ height: "300px" }}
+									>
+										<h6
+											className="card-title text-center mx-auto"
+											style={{ minWidth: "150px" }}
+										>
+											{post.name}
+										</h6>
+										<div className="card-text">
+											<p className="mb-0">
+												<strong>Height: </strong>
+												<em>{post.height} cm</em>
+											</p>
+											<p className="mb-0">
+												<strong>Mass: </strong> <em>{post.mass} Kg</em>
+											</p>
+											<p className="mb-0">
+												<strong>Hair Color: </strong> <em>{post.hair_color}</em>
+											</p>
+											<p className="mb-0">
+												<strong>Eye: </strong> <em>{post.eye_color}</em>
+											</p>
+											<p className="mb-0">
+												<strong>Gender: </strong> <em>{post.gender}</em>
+											</p>
+											<p className="mb-0">
+												<strong>Birth Year: </strong> <em>{post.birth_year}</em>
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
