@@ -43,7 +43,7 @@ export default function Nav() {
 								Species
 							</Link>
 							<Link className="nav-item btn-nav" to="/vehicles">
-								Vechicles
+								Vehicles
 							</Link>
 							<Link className="nav-item btn-nav btn-nav-last" to="/starships">
 								Starships

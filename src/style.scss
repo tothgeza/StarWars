@@ -24,7 +24,7 @@ html {
     margin: 0;
     padding: 0;
 }
-
+// Page setup for always bottom footer
 .page-container {
     position: relative;
     min-height: 100vh;
@@ -40,7 +40,7 @@ html {
     height: 4rem;
     z-index: 4;
 }
-
+// Main navbar
 .navbar {
     background-color: transparent !important;
 }
@@ -93,7 +93,63 @@ html {
 .nav-item {
     height: 35px;
 }
+// Nav buttons
+.btn-nav {
+    text-decoration: none !important;
+    text-align: center;
+    background: #222;
+    background: linear-gradient(#333, #222);
+    box-sizing: border-box;
+    border: 1px solid #444;
+    border-radius: 0;
+    border-left-color: #000;
+    box-shadow: 0 2px 0 #000;
+    color: #888;
+    display: block;
+    float: left;
+    font-family: "Cabin", helvetica, arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    height: 35px;
+    line-height: 40px;
+    margin-left: 0;
+    padding: 0 10px;
+    position: relative;
+    text-shadow: 0 -1px 0 #000;
+    width: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.btn-nav-frst {
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #444;
+}
+
+.btn-nav-last {
+    border-radius: 0 5px 5px 0;
+}
+
+.btn-nav:hover,
+.btn-nav:focus {
+    background: #292929;
+    background: linear-gradient(#393939, #292929);
+    // color: #5f5;
+    color: #ffc500;
+    outline: none important;
+    box-shadow: none;
+}
+
+.btn-nav:active {
+    background: #292929;
+    background: linear-gradient(#393939, #292929);
+    box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
+    outline: none important;
+    box-shadow: none;
+    top: 1px;
+}
+// Footer
 .footer-card {
     background: #111;
     background: linear-gradient(#1b1b1b, #111);
@@ -170,6 +226,7 @@ body {
     // background: #151515;
 }
 
+// Card image
 .img {
     background-size: cover;
     resize: both;
@@ -185,123 +242,7 @@ body {
     // z-index: 4;
     padding: 5px;
 }
-
-// .bdr {
-//     background: #222;
-//     background: linear-gradient(#333, #222);
-//     border: 1px solid #444;
-//     border-radius: 5px;
-//     box-shadow: 0 2px 0 #000;
-//     color: #888;
-//     display: block;
-//     font-family: "Cabin", helvetica, arial, sans-serif;
-//     font-size: 13px;
-//     font-weight: 400;
-//     text-shadow: 0 -1px 0 #000;
-//     width: 200px;
-//     padding: 3px;
-//     margin: 10px 10px 10px 10px !important;
-// }
-
-// .bdr:hover {
-//     animation: glow 800ms ease-out infinite alternate;
-//     background: #222922;
-//     background: linear-gradient(#333933, #222922);
-//     border-color: #393;
-//     box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1), 0 2px 0 #000;
-//     color: #efe;
-//     outline: none;
-// }
-
-#root {
-    height: 100vh;
-}
-
-// Pagination
-// Backgroung animation
-.twinkling,
-.clouds {
-    position: absolute;
-    top: -10;
-    left: 1;
-    right: 1;
-    bottom: 0;
-    width: 99.9%;
-    height: 99%;
-    display: block;
-}
-
-.twinkling {
-    background: transparent url("./img/twinkling.png") repeat top center;
-    z-index: 1;
-    animation: move-twink-back 200s linear infinite;
-}
-
-.clouds {
-    background: transparent url("./img/clouds.png") repeat top center;
-    z-index: 2;
-    opacity: 0.4;
-    animation: move-clouds-back 200s linear infinite;
-}
-
-.btn-nav {
-    text-decoration: none !important;
-    text-align: center;
-    background: #222;
-    background: linear-gradient(#333, #222);
-    box-sizing: border-box;
-    border: 1px solid #444;
-    border-radius: 0;
-    border-left-color: #000;
-    box-shadow: 0 2px 0 #000;
-    color: #888;
-    display: block;
-    float: left;
-    font-family: "Cabin", helvetica, arial, sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    height: 35px;
-    line-height: 40px;
-    margin-left: 0;
-    padding: 0 10px;
-    position: relative;
-    text-shadow: 0 -1px 0 #000;
-    width: 80px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-nav-frst {
-    border-radius: 5px 0 0 5px;
-    border: 1px solid #444;
-}
-
-.btn-nav-last {
-    border-radius: 0 5px 5px 0;
-}
-
-.btn-nav:hover,
-.btn-nav:focus {
-    background: #292929;
-    background: linear-gradient(#393939, #292929);
-    // color: #5f5;
-    color: #ffc500;
-    outline: none important;
-    box-shadow: none;
-}
-
-.btn-nav:active {
-    background: #292929;
-    background: linear-gradient(#393939, #292929);
-    box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
-    outline: none important;
-    box-shadow: none;
-    top: 1px;
-}
-
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-
 .flip-card {
     // background: #222;
     // border: 1px solid #444;
@@ -364,7 +305,7 @@ body {
     // color: rgb(170, 170, 170);
     left: -14px;
     .card-body {
-        padding: 12px;
+        padding: 12px 6px;
     }
 }
 
@@ -376,6 +317,9 @@ body {
     .card-text {
         text-shadow: 0 -1px 0 #000;
     }
+    .card-body {
+        padding: 0.8rem;
+    }
     background: #292922;
     border-color: #ffc500;
     box-shadow: 0 0 5px rgba(255, 225, 0, 0.2), inset 0 0 5px rgba(255, 225, 0, 0.1), 0 2px 0 #000;
@@ -383,19 +327,16 @@ body {
     outline: none;
 }
 
-.selected {
-    color: $warning;
-    background: #292929;
-    background: linear-gradient(#393939, #292929);
-    box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
-    outline: none important;
-    box-shadow: none;
-    // top: 1px;
-}
+// .selected {
+//     color: $warning;
+//     background: #292929;
+//     background: linear-gradient(#393939, #292929);
+//     box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
+//     outline: none important;
+//     box-shadow: none;
+//     // top: 1px;
+// }
 
-.flip-card-front .card-body{
-    padding: 12px 6px;
-}
 // @keyframes glow {
 //     0% {
 //         // border-color: #393;
@@ -408,6 +349,32 @@ body {
 //         box-shadow: 0 0 20px rgba(255, 225, 0, 0.6), inset 0 0 10px rgba(255, 225, 0, 0.4), 0 2px 0 #000;
 //     }
 // }
+
+// Backgroung animation
+.twinkling,
+.clouds {
+    position: absolute;
+    top: -10;
+    left: 1;
+    right: 1;
+    bottom: 0;
+    width: 99.9%;
+    height: 99%;
+    display: block;
+}
+
+.twinkling {
+    background: transparent url("./img/twinkling.png") repeat top center;
+    z-index: 1;
+    animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+    background: transparent url("./img/clouds.png") repeat top center;
+    z-index: 2;
+    opacity: 0.4;
+    animation: move-clouds-back 200s linear infinite;
+}
 
 @keyframes move-twink-back {
     from {
