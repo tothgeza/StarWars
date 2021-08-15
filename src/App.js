@@ -3,12 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import "../src/style.scss";
-import People from "./components/People";
-import Planets from "./components/Planets";
-import Films from "./components/Films";
-import Species from "./components/Species";
-import Vehicles from "./components/Vehicles";
-import Starships from "./components/Starships";
+import Category from "./components/Category";
 
 function App() {
 	return (
@@ -20,12 +15,24 @@ function App() {
 					<div className="content-wrapper">
 						<Nav />
 						<Switch>
-							<Route path="/people" component={People} />
-							<Route path="/planets" component={Planets} />
-							<Route path="/films" component={Films} />
-							<Route path="/species" component={Species} />
-							<Route path="/vehicles" component={Vehicles} />
-							<Route path="/starships" component={Starships} />
+							<Route path="/people">
+								<Category typeOfCategory="people" />
+							</Route>
+							<Route path="/planets">
+								<Category typeOfCategory="planets" />
+							</Route>
+							<Route path="/films">
+								<Category typeOfCategory="films" />
+							</Route>
+							<Route path="/species">
+								<Category typeOfCategory="species" />
+							</Route>
+							<Route path="/vehicles">
+								<Category typeOfCategory="vehicles" />
+							</Route>
+							<Route path="/starships">
+								<Category typeOfCategory="starships" />
+							</Route>
 						</Switch>
 					</div>
 					<Footer />

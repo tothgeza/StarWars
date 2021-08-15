@@ -1,13 +1,13 @@
 import TruncateMarkup from "react-truncate-markup";
 import { FaCoins } from "react-icons/fa";
 
-const Card = ({ post, type, rowNumber }) => {
-	if (type === "people") {
-		type = "characters";
+const Card = ({ post, typeOfCategory, rowNumber }) => {
+	if (typeOfCategory === "people") {
+		typeOfCategory = "characters";
 	}
 	const slicedData = sliceData(post, rowNumber);
 
-	const imgURL = `https://starwars-visualguide.com/assets/img/${type}/`;
+	const imgURL = `https://starwars-visualguide.com/assets/img/${typeOfCategory}/`;
 
 	function getId(url) {
 		return url.split("/")[url.split("/").length - 2];
@@ -84,7 +84,7 @@ const Card = ({ post, type, rowNumber }) => {
 						<div className="card-body text-center">
 							<TruncateMarkup lines={1}>
 								<h6 className="card-title">
-									{type !== "films" ? post.name : post.title}
+									{typeOfCategory !== "films" ? post.name : post.title}
 								</h6>
 							</TruncateMarkup>
 						</div>
@@ -95,7 +95,7 @@ const Card = ({ post, type, rowNumber }) => {
 							style={{ height: "300px" }}
 						>
 							{/* Films has different data structure, so it need handled separatly */}
-							{type === "films" ? (
+							{typeOfCategory === "films" ? (
 								<div className="card-text">
 									<p className="mb-0">
 										<strong>Title: </strong>

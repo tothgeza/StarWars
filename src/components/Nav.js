@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { ReactComponent as StarWars } from "../img/sw_logo4.svg";
+import { ReactComponent as StarWars } from "../img/sw_logo.svg";
 
 export default function Nav() {
 	return (

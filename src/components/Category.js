@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Pagination from "./Pagination";
 import Cards from "./Cards";
 
-function Films() {
-	const [films, setFilms] = useState({
+function Category({ typeOfCategory }) {
+	const [dataOfCategory, setDataOfCategory] = useState({
 		results: [],
 	});
 	const [loading, setLoading] = useState(false);
@@ -12,27 +12,27 @@ function Films() {
 	const [postsPerPage] = useState(10);
 
 	useEffect(() => {
-		fetchFilms();
+		fetchCategory();
 	}, []);
 
-	const fetchFilms = async (url) => {
+	const fetchCategory = async (url) => {
 		setLoading(true);
 		let newUrl = "";
 		if (url === undefined) {
-			newUrl = "https://swapi.dev/api/films/";
+			newUrl = `https://swapi.dev/api/${typeOfCategory}/`;
 			setCurrentPage(1);
 		} else {
-			newUrl = "https://swapi.dev/api/films/?page=" + url;
+			newUrl = `https://swapi.dev/api/${typeOfCategory}/?page=` + url;
 			setCurrentPage(url);
 		}
 		const dataJson = await fetch(newUrl);
 		const data = await dataJson.json();
-		setFilms(data);
+		setDataOfCategory(data);
 		setTotalPosts(data.count);
 		setLoading(false);
 	};
 
-	const paginate = (pageNumber) => fetchFilms(pageNumber);
+	const paginate = (pageNumber) => fetchCategory(pageNumber);
 
 	return (
 		<div className="top-level mt-3">
@@ -42,8 +42,13 @@ function Films() {
 				paginate={paginate}
 				currentPage={currentPage}
 			/>
-			<Cards posts={films} loading={loading} type="films" rowNumber={8} />
+			<Cards
+				posts={dataOfCategory}
+				loading={loading}
+				typeOfCategory={typeOfCategory}
+				rowNumber={8}
+			/>
 		</div>
 	);
 }
-export default Films;
+export default Category;
