@@ -3,16 +3,6 @@ $warning: #ffc500;
 $banana: #ffc400ce;
 $sw-yellow: rgb(255, 194, 59);
 $navbar-dark-hover-color: rgba($warning, 0.75);
-// $own-border-shadow: 0 0 0.2rem #fff,
-// 0 0 0.2rem #fff,
-// 0 0 0.6rem #ff0000,
-// 0 0 0.6rem #ff0000,
-// 0 0 1.8rem #ff0000,
-// inset 0 0 1rem #ff0000;
-$own-border-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1), 0 2px 0 #000;
-// $own-border-shadow: 0 0 5px rgba(255, 194, 59, 0.2),
-// inset 0 0 5px rgba(255, 194, 59, 0.1),
-// 0 2px 0 #000;
 $blue-text-shadow: 0 0 1.2rem #4a7dff, 0 0 0.6rem #4a7dff, 0 0 1.8rem #4a7dff;
 $navbar-dark-active-color: $warning;
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
@@ -51,7 +41,6 @@ html {
     display: block;
     height: 1px;
     left: 50%;
-    // margin: 0 0 0 -400px;
     margin: 0 0 0 -400px;
     position: absolute;
     width: 800px;
@@ -75,14 +64,10 @@ html {
     border: 1px solid #000;
     border-radius: 5px;
     box-shadow: inset 0 0 0 1px #272727;
-    // display: inline-block;
     font-size: 0px;
     margin: 15px auto 0;
     padding: 15px !important;
-    // position: relative;
     z-index: 4;
-    // height: 70px;
-    // min-width: 408px;
     width: 512px;
 }
 
@@ -135,7 +120,6 @@ html {
 .btn-nav:focus {
     background: #292929;
     background: linear-gradient(#393939, #292929);
-    // color: #5f5;
     color: #ffc500;
     outline: none important;
     box-shadow: none;
@@ -156,7 +140,6 @@ html {
     border: 1px solid #000;
     border-radius: 5px;
     box-shadow: inset 0 0 0 1px #272727;
-    // display: inline-block;
     font-family: "Cabin", helvetica, arial, sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -164,7 +147,6 @@ html {
     font-size: 13px;
     margin: auto 0 0 auto;
     padding: 10px;
-    // position: relative;
     z-index: 4;
     height: 40px;
     min-width: 300px;
@@ -184,12 +166,8 @@ footer:after {
     display: block;
     height: 1px;
     left: -1%;
-    // margin: 0 0 0 -400px;
-    // margin: 0 0 0 -370px;
     position: relative;
-    // width: 800px;
     margin: 0 auto 0 auto;
-    // width: 1150px;
     z-index: -1;
 }
 
@@ -231,15 +209,8 @@ body {
     background-size: cover;
     resize: both;
     border-radius: 5px 5px 0 0;
-    // width: 221px;
     height: 260px;
     background-position: top center;
-    // position: relative;
-    // transition: background 0.5s;
-    // &:hover {
-    //     background-size: 110%;
-    // }
-    // z-index: 4;
     padding: 5px;
 }
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
