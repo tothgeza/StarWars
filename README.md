@@ -14,7 +14,7 @@
 
 ## Introduction
 
-This is my first project when i used React, I only wanted to practice React, fetch data from API and play a little bit with css.
+This is my first project when I used React, I only wanted to practice React, fetch data from API and play a little bit with css.
 
 ## Description
 
