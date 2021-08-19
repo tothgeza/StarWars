@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ReactComponent as StarWars } from "../img/sw_logo.svg";
 
 export default function Nav() {
@@ -30,9 +30,9 @@ export default function Nav() {
 							{/* <li className="nav-item">
 								<div className="nav-logo"></div>
 							</li> */}
-							<NavLink className="nav-item btn-nav btn-nav-frst" to="/people">
+							<Link className="nav-item btn-nav btn-nav-frst" to="/people">
 								People
-							</NavLink>
+							</Link>
 							<Link className="nav-item btn-nav" to="/planets">
 								Planets
 							</Link>
