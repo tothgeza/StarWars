@@ -11,7 +11,6 @@ export default function Footer() {
 							<span className="text-muted fs-7">
 								&copy; {new Date().getFullYear()}
 							</span>
-							<span className="text-warning"> SWAPI</span>
 							<span className="text-muted fst-italic fs-7"> by Géza Tóth </span>
 						</div>
 						<div class="col-1">
@@ -20,7 +19,10 @@ export default function Footer() {
 								target="_blank"
 								rel="noreferrer"
 							>
-								<i class="fab fa-linkedin fs-5 text-primary"></i>
+								<i
+									class="fab fa-linkedin fs-5 text-primary"
+									style={{ position: "relative", left: "-15px", top: "-1px" }}
+								></i>
 							</a>
 						</div>
 						<div class="col-1">
@@ -29,7 +31,10 @@ export default function Footer() {
 								target="_blank"
 								rel="noreferrer"
 							>
-								<i className="fab fa-github text-white fs-5"></i>
+								<i
+									className="fab fa-github text-white fs-5"
+									style={{ position: "relative", left: "-12px", top: "-1px" }}
+								></i>
 							</a>
 						</div>
 					</div>
