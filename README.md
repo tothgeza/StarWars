@@ -18,7 +18,7 @@ This is my first project when i used React, I only wanted to practice React, fet
 
 ## Description
 
-The application uses the free SWAPI API to fetch data and React to show content (without reloding the site). You can choose from six category on the page and in every category you can navigate with pagination in the content. The application displays the content with cards. The cards have two sides: the front with a picture and title, and the back with a description. When you hover the mouse pointer over the card, it flips over and the back appears.
+The application uses the free SWAPI API to fetch data and React to show content (without reloading the site). You can choose from six category on the page and in every category you can navigate with pagination in the content. The application displays the content with cards. The cards have two sides: the front with a picture and title, and the back with a description. When you hover the mouse pointer over the card, it flips over and the back appears.
 
 ## Technologies
 
