@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+<!-- ABOUT THE PROJECT -->
+<br />
+<p align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h1 align="center">StarWars Wikipedia</h2>
+  <br />
+  <p align="center">
+    <a href="https://tothgeza.github.io/starwars/">View Demo</a>
+  </p>
+  <br />
+</p>
 
-## Available Scripts
+[![Reaction Test][product-screenshot]](https://example.com)
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+This is my first project when i used React, I only wanted to practice React, fetch data from API and play a little bit with css.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Description
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The application uses the free SWAPI API to fetch data and React to show content (without reloding the site). You can choose from six category on the page and in every category you can navigate with pagination in the content. The application displays the content with cards. The cards have two sides: the front with a picture and title, and the back with a description. When you hover the mouse pointer over the card, it flips over and the back appears.
 
-### `npm test`
+## Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* React
+* Bootstrap
+* CSS
+* SAS
+* TypeScript
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+(Pre-installed node.js and npm is required. If you do not have navigate to the Node.js <a href="https://nodejs.org/en/">homepage</a>, follow the subsequent instructions to install Node.js and npm. If you’ve already installed Node.js, that’s okay, do it anyway.)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repo:
+```bash
+git clone https://github.com/tothgeza/starwars.git
+```
+2. Move to project folder:
+```bash
+cd starwars
+```
+3. Install dependencies:
+```bash
+npm install
+```
+4. Run application:
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Demo
 
-### `npm run eject`
+Link: https://tothgeza.github.io/starwars/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Contact
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[<img src="https://img.shields.io/badge/Linkedin-white?style=flat&logo=linkedin&labelColor=blue" alt="LinkedIn logo" title="LinkedIn" height="25" />](https://www.linkedin.com/in/gezatoth)
+[<img src="https://img.shields.io/badge/Gmail-white?style=flat&logo=gmail&labelColor=white" alt="LinkedIn logo" title="LinkedIn" height="25" />](mailto:toth.geza.0425@gmail.com)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[product-screenshot]: src/img/screenshot.png
